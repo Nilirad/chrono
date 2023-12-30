@@ -35,6 +35,7 @@ serde = { version = "1.0.99", default-features = false, optional = true }
 pure-rust-locales = { version = "0.7", optional = true }
 rkyv = { version = "0.7", optional = true }
 arbitrary = { version = "1.0.0", features = ["derive"], optional = true }
+bevy_reflect = "0.12.1"
 
 [target.'cfg(all(target_arch = "wasm32", not(any(target_os = "emscripten", target_os = "wasi"))))'.dependencies]
 wasm-bindgen = { version = "0.2", optional = true }

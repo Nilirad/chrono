@@ -192,6 +192,7 @@ impl Days {
 /// [proleptic Gregorian date]: crate::NaiveDate#calendar-date
 #[derive(PartialEq, Eq, Hash, PartialOrd, Ord, Copy, Clone)]
 #[cfg_attr(feature = "rkyv", derive(Archive, Deserialize, Serialize))]
+#[derive(bevy_reflect::Reflect)]
 pub struct NaiveDate {
     ymdf: DateImpl, // (year << 13) | of
 }

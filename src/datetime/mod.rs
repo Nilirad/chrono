@@ -83,6 +83,7 @@ pub enum SecondsFormat {
 /// [`TimeZone`](./offset/trait.TimeZone.html) implementations.
 #[derive(Clone)]
 #[cfg_attr(feature = "rkyv", derive(Archive, Deserialize, Serialize))]
+#[derive(bevy_reflect::Reflect)]
 pub struct DateTime<Tz: TimeZone> {
     datetime: NaiveDateTime,
     offset: Tz::Offset,

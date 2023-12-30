@@ -43,6 +43,7 @@ use crate::{Date, DateTime};
 #[derive(Copy, Clone, PartialEq, Eq, Hash)]
 #[cfg_attr(feature = "rkyv", derive(Archive, Deserialize, Serialize))]
 #[cfg_attr(feature = "arbitrary", derive(arbitrary::Arbitrary))]
+#[derive(bevy_reflect::Reflect)]
 pub struct Utc;
 
 #[cfg(feature = "clock")]
